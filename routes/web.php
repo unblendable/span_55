@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\File;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return File::get(public_path() . '/old_web/index.html');
+});
+
+Route::get('/frontend', function() {
+    return File::get(public_path(). '/frontend/index.html');
 });
