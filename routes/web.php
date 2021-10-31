@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/frontend', function() {
     return File::get(public_path(). '/frontend/index.html');
 });
+
+Route::get('/backend', function(){
+    return File::get('../backend/dist/index.html');
+});
